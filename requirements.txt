@@ -1,0 +1,14 @@
+streamlit
+openai
+langchain
+pinecone-client
+tqdm
+PyYAML
+tiktoken
+openpyxl
+pandas
+langchain.text_splitter
+langchain_openai
+uuid
+pinecone
+

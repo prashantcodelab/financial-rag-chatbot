@@ -25,7 +25,7 @@ Financial Analyst Chabot is a RAG based solution that allows the user to ask que
 
 ## Tech Stack
 
-* Embeddings - Open AI `text-embedding-3-large'
+* Embeddings - Open AI `text-embedding-3-large`
 * LLM - Open AI `gpt-4o` 
 * Vector Store - Pinecone
 * UI - Streamlit
@@ -33,10 +33,13 @@ Financial Analyst Chabot is a RAG based solution that allows the user to ask que
 * Chunking - LangChain
 
 ## Flow 
-
-First the documents are ingested using a parser and cunks are created using `RecursiveCharacterTextSplitter` from Langchain. Then using OpenAIEmbeddings `text-embeddings-3-large` embeddings are created and stored in the **Pinecone** vector database. When a user asks a questions, chatbot create query embeddings and retrieves for similar documents using **cosine similarity**. **Top_k** is set to 8 and OpenAI GPT **temperature** is set to 0.2 to control the randomness & get realiable answers as we're dealing with financial documents.  
-
 ![alt text](img/Financial_Analyst_Chabot.png)
+
+First the documents are ingested using a parser and chunks are created using `RecursiveCharacterTextSplitter` from Langchain. Then using OpenAIEmbeddings `text-embeddings-3-large` embeddings are created and stored in the **Pinecone** vector database. 
+
+When a user asks a questions, chatbot create query embeddings and retrieves for similar documents using **cosine similarity**. **Top_k** is set to 8 and OpenAI GPT **temperature** is set to 0.2 to control the randomness & get realiable answers as we're dealing with financial documents.  
+
+
 
 ![alt text](img/financial_rag_flow.png)
 
@@ -142,4 +145,4 @@ streamlit_app.py
 
 ```
 
-### Source for Samnple Data File - https://www.nasdaq.com/market-activity/stocks/saia/sec-filings
+Source for Sample Data File - https://www.nasdaq.com/market-activity/stocks/saia/sec-filings
